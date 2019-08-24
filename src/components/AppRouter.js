@@ -7,11 +7,11 @@ import WelcomePage from './WelcomePage';
 
 export default function AppRouter() {
     return (
-       <dive>
+       <div>
         <Route exact path='/' component={WelcomePage} />
-        <Route path='character' component={CharacterList} />
-        <Route path='episode' component={EpisodeList} />
-        <Route path='location' component={LocationList} />
-       </dive>  
+        <Route exact path='/character' component={CharacterList} />
+        <Route path='/episode' component={EpisodeList} />
+        <Route path='/location' component={LocationList} />
+       </div>  
     )
 }

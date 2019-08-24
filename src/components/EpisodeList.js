@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import EpisodeCard from './EpisodeCard';
+import styled from 'styled-components';
+
+//styling 
+const StyledDiv = styled.div`
+display: flex;
+flex-wrap: wrap;
+`
 
 export default function EpisodeList() {
     const [data, setData] = useState([]);
@@ -18,10 +25,10 @@ export default function EpisodeList() {
     }, [])
 
     return (
-        <div>
+        <StyledDiv>
             {data.map(obj => {
                 return <EpisodeCard key={obj.id} episode={obj} />
             })}
-        </div>
+        </StyledDiv>
     )
 }
